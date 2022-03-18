@@ -1,0 +1,84 @@
+activation: tanh
+agent:
+  class: agent.sac.SACAgent
+  name: sac
+  params:
+    action_dim: ???
+    action_range: ???
+    actor_betas:
+    - 0.9
+    - 0.999
+    actor_cfg: ${diag_gaussian_actor}
+    actor_lr: 0.0001
+    actor_update_frequency: 1
+    alpha_betas:
+    - 0.9
+    - 0.999
+    alpha_lr: 0.0001
+    batch_size: 1024
+    critic_betas:
+    - 0.9
+    - 0.999
+    critic_cfg: ${double_q_critic}
+    critic_lr: 0.0001
+    critic_target_update_frequency: 2
+    critic_tau: 0.005
+    device: ${device}
+    discount: 0.99
+    init_temperature: 0.1
+    learnable_temperature: true
+    obs_dim: ???
+    radius: 0.3
+    sensor: coordinates
+    v_pref: 1
+    visible: false
+device: cuda
+diag_gaussian_actor:
+  class: agent.actor.DiagGaussianActor
+  params:
+    action_dim: ${agent.params.action_dim}
+    hidden_depth: 2
+    hidden_dim: 1024
+    log_std_bounds:
+    - -5
+    - 2
+    obs_dim: ${agent.params.obs_dim}
+double_q_critic:
+  class: agent.critic.DoubleQCritic
+  params:
+    action_dim: ${agent.params.action_dim}
+    hidden_depth: 2
+    hidden_dim: 1024
+    obs_dim: ${agent.params.obs_dim}
+ensemble_size: 3
+env: CrowdSim-v0
+eval_frequency: 10000
+experiment: PEBBLE
+feed_type: 0
+gradient_update: 1
+label_margin: 0.0
+large_batch: 10
+log_frequency: 10000
+log_save_tb: true
+max_feedback: 1400
+num_eval_episodes: 10
+num_interact: 250
+num_reward_train_steps: 500
+num_seed_steps: 3000
+num_train_steps: ${num_unsup_steps}
+num_unsup_steps: 4000
+replay_buffer_capacity: ${num_unsup_steps}
+reset_update: 20
+reward_batch: 2
+reward_lr: 0.0003
+reward_schedule: 0
+reward_update: 200
+save_video: false
+seed: 1
+segment: 75
+teacher_beta: -1
+teacher_eps_equal: 0
+teacher_eps_mistake: 0
+teacher_eps_skip: 0
+teacher_gamma: 1
+topK: 5
