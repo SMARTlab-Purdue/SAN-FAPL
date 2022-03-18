@@ -1,5 +1,5 @@
 # SAN-FAPL
-This repository contains source codes for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation", submitted for IROS-2022.
+This repository contains the source code for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation", submitted for IROS-2022.
 For more details, please refer to [our project website](https://sites.google.com/view/san-fapl)
 
 
@@ -80,16 +80,13 @@ If you find the code or the paper useful for your research, please cite our pape
 
 ## Acknowledgement
 
-Other contributors:  
-[Weizheng Wang](https://github.com/WzWang-Robot/FAPL)  
+Contributors:  
+[Weizheng Wang](https://github.com/WzWang-Robot/FAPL); [Ruiqi Wang](https://github.com/R7-Robot?tab=repositories).
 
 Part of the code is based on the following repositories:  
 
-[1] (Github: https://github.com/vita-epfl/CrowdNav)
+[CrowdNav](https://github.com/vita-epfl/CrowdNav); [DSRNN_CrowdNav](https://github.com/Shuijing725/CrowdNav_DSRNN); and [B_Pref](https://github.com/rll-research/B_Pref).
 
-[2] (Github: https://github.com/Shuijing725/CrowdNav_DSRNN)
-
-[3] (Github: https://github.com/rll-research/B_Pref)
 
 
 
