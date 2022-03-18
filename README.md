@@ -13,7 +13,8 @@ Socially aware robot navigation, where a robot is required to optimize its traje
 </div>  
 
 
-### Set Up
+
+## Set Up
 1. Install the required python package
 ```
 pip install -r requirements.txt
@@ -29,7 +30,7 @@ pip install -e .
 ```
 
 
-### Run the code
+## Run the code
 0. Develop expert demonstrations in hybrid experience learning.
 ```
 python demonstration_api.py --vis
@@ -52,25 +53,27 @@ python plot.py
 
 (The code was tested in Ubuntu 18.04 with Python 3.6.)
 
-## Learning Curve
+## Simulation Environment
 
-Simulator: This project uses a 22 m × 20 m two-dimensional space, and the yellow circle indicates the robot. The blue dotted line illustrates the robot FoV, humans that can be detected by the robot are green circles while those out of robot view are red circles. The red star is the robot goal, and the orientation and number of each agent are presented as a red arrow and a black number respectively.
+The simulation environment is a 22 m × 20 m two-dimensional space, and the yellow circle indicates the robot. The blue dotted line illustrates the robot FoV, humans that can be detected by the robot are green circles while those out of robot view are red circles. The red star is the robot goal, and the orientation and number of each agent are presented as a red arrow and a black number respectively.
 
 <div align=center>
 <img src="/figures/environment.jpg" width="300" />
 </div>  
 
-Learning curves of FAPL and baselines.
+## Learning Curve
+
 <div align=center>
 <img src="/figures/curve_sr.png" width="450" /> <img src="/figures/curve_df.png" width="450" />
 </div>  
+
 ## Citation
 If you find the code or the paper useful for your research, please cite our paper:
 ```
-@inproceedings{FAPL,
-  title={FAPL},
-  author={Ruqii Wang, Weizheng Wang, Professor},
-  booktitle={International Conference on Robotics and Automation (IROS)},
+@article{wang2022feedback,
+  title={Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation},
+  author={Wang, Ruiqi and Wang, Weizheng and Min, Byung-Cheol},
+  journal={arXiv preprint arXiv:2201.00469},
   year={2022}
 }
 ```
