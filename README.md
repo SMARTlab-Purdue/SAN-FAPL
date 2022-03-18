@@ -1,5 +1,5 @@
 # SAN-FAPL
-This repository contains source codes for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation" with submitted in IROS-2022.
+This repository contains source codes for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation", submitted for IROS-2022.
 For more details, please refer to [our project website](https://sites.google.com/view/san-fapl)
 
 
@@ -8,7 +8,9 @@ Socially aware robot navigation, where a robot is required to optimize its traje
 
 
 ## Overview Architecture for FAPL
+<div align=center>
 <img src="/figures/architecture.png" width="800" />
+</div>  
 
 
 ### Set Up
@@ -28,7 +30,7 @@ pip install -e .
 
 
 ### Run the code
-0. Develop experts demonstrations for hybrid experience learning.
+0. Develop expert demonstrations in hybrid experience learning.
 ```
 python demonstration_api.py --vis
 ```
@@ -38,12 +40,12 @@ python demonstration_api.py --vis
 python train_FAPL.py 
 ```
 
-2. Test policies.
+2. Test a policy.
 ```
 python test_FAPL.py
 ```
 
-3. Plot training curve.
+3. Plot training curves.
 ```
 python plot.py
 ```
@@ -54,14 +56,14 @@ python plot.py
 
 Simulator: This project uses a 22 m × 20 m two-dimensional space, and the yellow circle indicates the robot. The blue dotted line illustrates the robot FoV, humans that can be detected by the robot are green circles while those out of robot view are red circles. The red star is the robot goal, and the orientation and number of each agent are presented as a red arrow and a black number respectively.
 
+<div align=center>
 <img src="/figures/environment.jpg" width="300" />
+</div>  
 
-Learning curves of FAPL and other policies.
-
-<img src="/figures/curve_sr.png" width="450" />
-
-<img src="/figures/curve_df.png" width="450" />
-
+Learning curves of FAPL and baselines.
+<div align=center>
+<img src="/figures/curve_sr.png" width="450" /> <img src="/figures/curve_df.png" width="450" />
+</div>  
 ## Citation
 If you find the code or the paper useful for your research, please cite our paper:
 ```
