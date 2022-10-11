@@ -1,6 +1,6 @@
 # SAN-FAPL
 This repository contains the source code for our paper: "Feedback-efficient Active Preference Learning for Socially Aware Robot Navigation", accepted to IROS-2022.
-For more details, please refer to [our project website](https://sites.google.com/view/san-fapl)
+For more details, please refer to [our project website](https://sites.google.com/view/san-fapl),
 
 
 ## Abstract
